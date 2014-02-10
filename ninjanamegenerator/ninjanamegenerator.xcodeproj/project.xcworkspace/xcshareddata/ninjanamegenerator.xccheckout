@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A5562780-97A3-4D56-BEB8-BBB98345C2B1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ninjanamegenerator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>04B033B7-2842-4477-BDDE-88FA458C0B55</key>
+		<string>ssh://github.com/yohei-washizaki/ninja-name-generator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ninjanamegenerator/ninjanamegenerator.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>04B033B7-2842-4477-BDDE-88FA458C0B55</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/yohei-washizaki/ninja-name-generator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>04B033B7-2842-4477-BDDE-88FA458C0B55</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>04B033B7-2842-4477-BDDE-88FA458C0B55</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ninja-name-generator</string>
+		</dict>
+	</array>
+</dict>
+</plist>
