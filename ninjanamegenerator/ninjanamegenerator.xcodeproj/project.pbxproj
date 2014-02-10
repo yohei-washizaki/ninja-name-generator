@@ -22,6 +22,9 @@
 		5D7ABB3318A9250B00375C5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7ABB1218A9250A00375C5B /* UIKit.framework */; };
 		5D7ABB3B18A9250B00375C5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D7ABB3918A9250B00375C5B /* InfoPlist.strings */; };
 		5D7ABB3D18A9250B00375C5B /* ninjanamegeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7ABB3C18A9250B00375C5B /* ninjanamegeneratorTests.m */; };
+		5D813CE118A93583000D503E /* FamilyName.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D813CE018A93583000D503E /* FamilyName.plist */; };
+		5D813CE318A9360F000D503E /* PopularName.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D813CE218A9360F000D503E /* PopularName.plist */; };
+		5D813CE518A93622000D503E /* FirstName.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D813CE418A93622000D503E /* FirstName.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		5D7ABB3818A9250B00375C5B /* ninjanamegeneratorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ninjanamegeneratorTests-Info.plist"; sourceTree = "<group>"; };
 		5D7ABB3A18A9250B00375C5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D7ABB3C18A9250B00375C5B /* ninjanamegeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ninjanamegeneratorTests.m; sourceTree = "<group>"; };
+		5D813CE018A93583000D503E /* FamilyName.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FamilyName.plist; sourceTree = "<group>"; };
+		5D813CE218A9360F000D503E /* PopularName.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PopularName.plist; sourceTree = "<group>"; };
+		5D813CE418A93622000D503E /* FirstName.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirstName.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,9 @@
 				5D7ABB1718A9250A00375C5B /* InfoPlist.strings */,
 				5D7ABB1A18A9250A00375C5B /* main.m */,
 				5D7ABB1C18A9250A00375C5B /* ninjanamegenerator-Prefix.pch */,
+				5D813CE018A93583000D503E /* FamilyName.plist */,
+				5D813CE218A9360F000D503E /* PopularName.plist */,
+				5D813CE418A93622000D503E /* FirstName.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,7 +243,10 @@
 			files = (
 				5D7ABB2518A9250A00375C5B /* Main_iPad.storyboard in Resources */,
 				5D7ABB2A18A9250A00375C5B /* Images.xcassets in Resources */,
+				5D813CE518A93622000D503E /* FirstName.plist in Resources */,
 				5D7ABB2218A9250A00375C5B /* Main_iPhone.storyboard in Resources */,
+				5D813CE318A9360F000D503E /* PopularName.plist in Resources */,
+				5D813CE118A93583000D503E /* FamilyName.plist in Resources */,
 				5D7ABB1918A9250A00375C5B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +487,7 @@
 				5D7ABB4218A9250B00375C5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D7ABB4318A9250B00375C5B /* Build configuration list for PBXNativeTarget "ninjanamegeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +496,7 @@
 				5D7ABB4518A9250B00375C5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
