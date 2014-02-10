@@ -8,5 +8,11 @@
 		<key>Japanese</key>
 		<string>半蔵</string>
 	</dict>
+	<dict>
+		<key>English</key>
+		<string>Rinzo</string>
+		<key>Japanese</key>
+		<string>林蔵</string>
+	</dict>
 </array>
 </plist>
