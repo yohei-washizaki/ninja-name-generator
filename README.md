@@ -1,0 +1,4 @@
+ninja-name-generator
+====================
+
+Ninja!
