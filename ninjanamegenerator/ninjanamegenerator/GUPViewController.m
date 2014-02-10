@@ -9,6 +9,13 @@
 #import "GUPViewController.h"
 #import <Social/Social.h>
 
+static NSString * LANG_JA        = @"Japanese";
+static NSString * LANG_EN        = @"English";
+static NSString * DB_FAMILYNAME  = @"FamilyName";
+static NSString * DB_POPULARNAME = @"PopularName";
+static NSString * DB_FIRSTNAME   = @"FirstName";
+static NSString * DB_EXT         = @"plist";
+
 @interface GUPViewController ()
 
 -(void)initializeDB;
@@ -46,14 +53,14 @@
     NSDictionary * popularName = [self randomNameFromDB:self.popularNameDB];
     NSDictionary * firstName   = [self randomNameFromDB:self.firstNameDB];
     
-    self.familyName.text  = [familyName objectForKey:@"English"];
-    self.popularName.text = [popularName objectForKey:@"English"];
-    self.firstName.text   = [firstName objectForKey:@"English"];
+    self.familyName.text  = [familyName objectForKey:LANG_EN];
+    self.popularName.text = [popularName objectForKey:LANG_EN];
+    self.firstName.text   = [firstName objectForKey:LANG_EN];
     
-    NSString * kanjiName  = [NSString stringWithFormat:@"%@ %@ %@",
-                             [familyName objectForKey:@"Japanese"],
-                             [popularName objectForKey:@"Japanese"],
-                             [firstName objectForKey:@"Japanese"]];
+    NSString * kanjiName  = [NSString stringWithFormat:@"%@%@%@",
+                             [familyName objectForKey:LANG_JA],
+                             [popularName objectForKey:LANG_JA],
+                             [firstName objectForKey:LANG_JA]];
 
     self.kanjiName.text   = kanjiName;
 }
@@ -84,15 +91,15 @@
     NSBundle * mainBundle = [NSBundle mainBundle];
     
     // Family name
-    NSString * pathToFamilyNameDB = [mainBundle pathForResource:@"FamilyName" ofType:@"plist"];
+    NSString * pathToFamilyNameDB = [mainBundle pathForResource:DB_FAMILYNAME ofType:DB_EXT];
     self.familyNameDB = [NSArray arrayWithContentsOfFile:pathToFamilyNameDB];
     
     // Popular name
-    NSString * pathToPopularNameDB = [mainBundle pathForResource:@"PopularName" ofType:@"plist"];
+    NSString * pathToPopularNameDB = [mainBundle pathForResource:DB_POPULARNAME ofType:DB_EXT];
     self.popularNameDB = [NSArray arrayWithContentsOfFile:pathToPopularNameDB];
     
     // First name(Secret Name)
-    NSString * pathToFirstNameDB = [mainBundle pathForResource:@"FirstName" ofType:@"plist"];
+    NSString * pathToFirstNameDB = [mainBundle pathForResource:DB_FIRSTNAME ofType:DB_EXT];
     self.firstNameDB = [NSArray arrayWithContentsOfFile:pathToFirstNameDB];
 }
 
