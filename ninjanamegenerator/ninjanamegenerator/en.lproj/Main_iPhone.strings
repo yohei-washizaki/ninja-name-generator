@@ -1,0 +1,21 @@
+
+/* Class = "IBUILabel"; text = "First Name"; ObjectID = "FRr-Q9-xBP"; */
+"FRr-Q9-xBP.text" = "First Name";
+
+/* Class = "IBUILabel"; text = "Popular Name"; ObjectID = "GQs-Kt-Uh3"; */
+"GQs-Kt-Uh3.text" = "Popular Name";
+
+/* Class = "IBUIButton"; normalTitle = "Tweet"; ObjectID = "O6R-1B-CxZ"; */
+"O6R-1B-CxZ.normalTitle" = "Tweet";
+
+/* Class = "IBUIButton"; normalTitle = "Generate"; ObjectID = "fZj-8d-8FJ"; */
+"fZj-8d-8FJ.normalTitle" = "Generate";
+
+/* Class = "IBUILabel"; text = "In Kanji"; ObjectID = "jiL-2y-Mf0"; */
+"jiL-2y-Mf0.text" = "In Kanji";
+
+/* Class = "IBUILabel"; text = "Family Name"; ObjectID = "jxM-6H-D9I"; */
+"jxM-6H-D9I.text" = "Family Name";
+
+/* Class = "IBUILabel"; text = "NINJA Name Generator"; ObjectID = "nC9-P6-S9b"; */
+"nC9-P6-S9b.text" = "NINJA Name Generator";
