@@ -69,7 +69,8 @@ static NSString * DB_EXT         = @"plist";
 {
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
-        NSString * text = [NSString stringWithFormat:@"◆試験的な投稿◆ My Ninja Name is %@ %@ %@.",
+        NSString * format = NSLocalizedString(@"TWITTER_TEXT", @"Initial text for twitter.");
+        NSString * text = [NSString stringWithFormat:format,
                            self.familyName.text,
                            self.popularName.text,
                            self.firstName.text];

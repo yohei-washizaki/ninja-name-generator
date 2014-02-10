@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  ninjanamegenerator
+
+  Created by Washizaki Yohei on 2014/02/11.
+  Copyright (c) 2014年 Washi. All rights reserved.
+*/
+
+"TWITTER_TEXT" = "*EXPERIMENTAL* My Ninja Name is %@ %@ %@!";
