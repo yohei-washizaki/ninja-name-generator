@@ -10,4 +10,5 @@
 
 @interface GUPViewController : UIViewController
 
+- (IBAction)onButtonTouchedUp:(id)sender;
 @end
