@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField * firstName;
 @property (weak, nonatomic) IBOutlet UITextField * kanjiName;
 
-- (IBAction)onButtonTouchedUp:(id)sender;
+- (IBAction)onGenerateButtonTouchedUp:(id)sender;
+- (IBAction)onTweetButtonTouchedUp:(id)sender;
 @end

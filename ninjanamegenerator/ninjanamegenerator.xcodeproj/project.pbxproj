@@ -25,6 +25,7 @@
 		5D813CE118A93583000D503E /* FamilyName.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D813CE018A93583000D503E /* FamilyName.plist */; };
 		5D813CE318A9360F000D503E /* PopularName.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D813CE218A9360F000D503E /* PopularName.plist */; };
 		5D813CE518A93622000D503E /* FirstName.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D813CE418A93622000D503E /* FirstName.plist */; };
+		5D813CE718A94A84000D503E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D813CE618A94A84000D503E /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		5D813CE018A93583000D503E /* FamilyName.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FamilyName.plist; sourceTree = "<group>"; };
 		5D813CE218A9360F000D503E /* PopularName.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PopularName.plist; sourceTree = "<group>"; };
 		5D813CE418A93622000D503E /* FirstName.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FirstName.plist; sourceTree = "<group>"; };
+		5D813CE618A94A84000D503E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D813CE718A94A84000D503E /* Social.framework in Frameworks */,
 				5D7ABB1118A9250A00375C5B /* CoreGraphics.framework in Frameworks */,
 				5D7ABB1318A9250A00375C5B /* UIKit.framework in Frameworks */,
 				5D7ABB0F18A9250A00375C5B /* Foundation.framework in Frameworks */,
@@ -109,6 +112,7 @@
 		5D7ABB0D18A9250A00375C5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D813CE618A94A84000D503E /* Social.framework */,
 				5D7ABB0E18A9250A00375C5B /* Foundation.framework */,
 				5D7ABB1018A9250A00375C5B /* CoreGraphics.framework */,
 				5D7ABB1218A9250A00375C5B /* UIKit.framework */,

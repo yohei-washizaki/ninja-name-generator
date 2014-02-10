@@ -7,6 +7,7 @@
 //
 
 #import "GUPViewController.h"
+#import <Social/Social.h>
 
 @interface GUPViewController ()
 
@@ -26,6 +27,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self initializeDB];
+
+    if([self respondsToSelector:@selector(onGenerateButtonTouchedUp:)])
+    {
+        [self performSelector:@selector(onGenerateButtonTouchedUp:) withObject:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,7 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)onButtonTouchedUp:(id)sender
+- (IBAction)onGenerateButtonTouchedUp:(id)sender
 {
     NSLog(@"Button is touched up inside.");
     NSDictionary * familyName  = [self randomNameFromDB:self.familyNameDB];
@@ -51,6 +57,26 @@
                              [firstName objectForKey:@"Japanese"]];
 
     self.kanjiName.text   = kanjiName;
+}
+
+- (IBAction)onTweetButtonTouchedUp:(id)sender
+{
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        NSString * text = [NSString stringWithFormat:@"◆試験的な投稿◆ My Ninja Name is %@ %@ %@.",
+                           self.familyName.text,
+                           self.popularName.text,
+                           self.firstName.text];
+        SLComposeViewController * composeController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [composeController setInitialText:text];
+        composeController.completionHandler = ^(SLComposeViewControllerResult result){
+            if (result == SLComposeViewControllerResultDone)
+            {
+                NSLog(@"Post succeeded!");
+            }
+        };
+        [self presentViewController:composeController animated:YES completion:nil];
+    }
 }
 
 #pragma mark - For internal
