@@ -54,6 +54,7 @@ static NSString * DB_EXT         = @"plist";
     NSDictionary * firstName   = [self randomNameFromDB:self.firstNameDB];
     
     self.familyName.text  = [familyName objectForKey:LANG_EN];
+    self.familyName.text  = [self.familyName.text uppercaseString];
     self.popularName.text = [popularName objectForKey:LANG_EN];
     self.firstName.text   = [firstName objectForKey:LANG_EN];
     
