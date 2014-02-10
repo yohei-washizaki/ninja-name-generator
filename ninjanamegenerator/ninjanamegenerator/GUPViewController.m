@@ -42,7 +42,6 @@
 
 - (IBAction)onGenerateButtonTouchedUp:(id)sender
 {
-    NSLog(@"Button is touched up inside.");
     NSDictionary * familyName  = [self randomNameFromDB:self.familyNameDB];
     NSDictionary * popularName = [self randomNameFromDB:self.popularNameDB];
     NSDictionary * firstName   = [self randomNameFromDB:self.firstNameDB];
@@ -87,17 +86,14 @@
     // Family name
     NSString * pathToFamilyNameDB = [mainBundle pathForResource:@"FamilyName" ofType:@"plist"];
     self.familyNameDB = [NSArray arrayWithContentsOfFile:pathToFamilyNameDB];
-    NSLog(@"%@", self.familyNameDB);
     
     // Popular name
     NSString * pathToPopularNameDB = [mainBundle pathForResource:@"PopularName" ofType:@"plist"];
     self.popularNameDB = [NSArray arrayWithContentsOfFile:pathToPopularNameDB];
-    NSLog(@"%@", self.popularNameDB);
     
     // First name(Secret Name)
     NSString * pathToFirstNameDB = [mainBundle pathForResource:@"FirstName" ofType:@"plist"];
     self.firstNameDB = [NSArray arrayWithContentsOfFile:pathToFirstNameDB];
-    NSLog(@"%@", self.firstNameDB);
 }
 
 -(NSDictionary*)randomNameFromDB:(NSArray *)DB
