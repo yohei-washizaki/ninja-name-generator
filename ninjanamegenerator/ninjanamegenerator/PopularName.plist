@@ -10,9 +10,27 @@
 	</dict>
 	<dict>
 		<key>English</key>
+		<string>Morikiyo</string>
+		<key>Japanese</key>
+		<string>盛清</string>
+	</dict>
+	<dict>
+		<key>English</key>
 		<string>Rinzo</string>
 		<key>Japanese</key>
 		<string>林蔵</string>
+	</dict>
+	<dict>
+		<key>English</key>
+		<string>Dojun</string>
+		<key>Japanese</key>
+		<string>道順</string>
+	</dict>
+	<dict>
+		<key>English</key>
+		<string>Goemon</string>
+		<key>Japanese</key>
+		<string>五右衛門</string>
 	</dict>
 </array>
 </plist>

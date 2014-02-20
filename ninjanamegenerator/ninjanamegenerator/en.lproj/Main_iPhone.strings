@@ -3,7 +3,7 @@
 "FRr-Q9-xBP.text" = "First Name";
 
 /* Class = "IBUILabel"; text = "Popular Name"; ObjectID = "GQs-Kt-Uh3"; */
-"GQs-Kt-Uh3.text" = "Popular Name";
+"GQs-Kt-Uh3.text" = "Nickname";
 
 /* Class = "IBUIButton"; normalTitle = "Tweet"; ObjectID = "O6R-1B-CxZ"; */
 "O6R-1B-CxZ.normalTitle" = "Tweet";

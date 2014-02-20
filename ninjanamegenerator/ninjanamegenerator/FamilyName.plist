@@ -14,5 +14,23 @@
 		<key>Japanese</key>
 		<string>間宮</string>
 	</dict>
+	<dict>
+		<key>English</key>
+		<string>Aoyama</string>
+		<key>Japanese</key>
+		<string>青山</string>
+	</dict>
+	<dict>
+		<key>English</key>
+		<string>Ishikawa</string>
+		<key>Japanese</key>
+		<string>石川</string>
+	</dict>
+	<dict>
+		<key>English</key>
+		<string>Iganosaki</string>
+		<key>Japanese</key>
+		<string>伊賀崎</string>
+	</dict>
 </array>
 </plist>
