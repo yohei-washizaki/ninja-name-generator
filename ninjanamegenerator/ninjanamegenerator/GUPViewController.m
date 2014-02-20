@@ -95,7 +95,7 @@ static NSString * DB_EXT         = @"plist";
         composeController.completionHandler = ^(SLComposeViewControllerResult result){
             if (result == SLComposeViewControllerResultDone)
             {
-                NSLog(@"Post succeeded!");
+                DLog(@"Post succeeded!");
             }
         };
         [self presentViewController:composeController animated:YES completion:nil];
@@ -105,19 +105,19 @@ static NSString * DB_EXT         = @"plist";
 #pragma mark - iAd
 - (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
 {
-    NSLog(@"Banner view is begining an ad action.");
+    DLog(@"Banner view is begining an ad action.");
     return YES;
 }
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    DLog(@"%s", __PRETTY_FUNCTION__);
     [self layoutAnimated:YES];
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    DLog(@"%s", __PRETTY_FUNCTION__);
     [self layoutAnimated:YES];
 }
 
