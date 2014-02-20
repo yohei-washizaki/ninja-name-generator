@@ -24,20 +24,17 @@ static NSString * DB_EXT         = @"plist";
 @property(strong, nonatomic) NSArray * familyNameDB;
 @property(strong, nonatomic) NSArray * popularNameDB;
 @property(strong, nonatomic) NSArray * firstNameDB;
-@property(nonatomic) BOOL bannerIsVisible;
+
+- (void)layoutAnimated:(BOOL)animated;
 
 @end
 
 @implementation GUPViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    if(self.bannerView)
-    {
-        self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, -self.bannerView.frame.size.height);
-    }
     
 	// Do any additional setup after loading the view, typically from a nib.
     [self initializeDB];
@@ -46,14 +43,22 @@ static NSString * DB_EXT         = @"plist";
     {
         [self performSelector:@selector(onGenerateButtonTouchedUp:) withObject:nil];
     }
-    
-    self.bannerIsVisible = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self layoutAnimated:NO];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [self layoutAnimated:[UIView areAnimationsEnabled]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)onGenerateButtonTouchedUp:(id)sender
@@ -75,6 +80,7 @@ static NSString * DB_EXT         = @"plist";
     self.kanjiName.text   = kanjiName;
 }
 
+#pragma mark - Social
 - (IBAction)onTweetButtonTouchedUp:(id)sender
 {
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
@@ -106,25 +112,35 @@ static NSString * DB_EXT         = @"plist";
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    if (!self.bannerIsVisible)
-    {
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
-        [UIView commitAnimations];
-        self.bannerIsVisible = YES;
-    }
+    [self layoutAnimated:YES];
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    if(self.bannerIsVisible)
+    [self layoutAnimated:YES];
+}
+
+- (void)layoutAnimated:(BOOL)animated
+{
+    CGRect contentFrame = self.contentView.frame;
+    CGRect bannerFrame  = self.bannerView.frame;
+    
+    if (self.bannerView.bannerLoaded)
     {
-        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
-        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
-        [UIView commitAnimations];
-        self.bannerIsVisible = NO;
+        contentFrame.size.height -= self.bannerView.frame.size.height;
+        bannerFrame.origin.y      = self.view.frame.size.height - self.bannerView.frame.size.height;
     }
+    else
+    {
+        bannerFrame.origin.y = self.view.frame.size.height;
+    }
+    
+    [UIView animateWithDuration:animated ? 0.25 : 0.0 animations:^{
+        self.contentView.frame = contentFrame;
+        [self.contentView layoutIfNeeded];
+        self.bannerView.frame = bannerFrame;
+    }];
 }
 
 #pragma mark - For internal

@@ -15,7 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField * popularName;
 @property (weak, nonatomic) IBOutlet UITextField * firstName;
 @property (weak, nonatomic) IBOutlet UITextField * kanjiName;
-@property (weak, nonatomic) IBOutlet ADBannerView * bannerView;
+@property (weak, nonatomic) IBOutlet UIView * contentView;
+@property (weak, nonatomic) IBOutlet ADBannerView *bannerView;
 
 - (IBAction)onGenerateButtonTouchedUp:(id)sender;
 - (IBAction)onTweetButtonTouchedUp:(id)sender;
