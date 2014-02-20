@@ -110,10 +110,18 @@
                                     <action selector="onTweetButtonTouchedUp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Usb-Kt-qAe"/>
                                 </connections>
                             </button>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2z1-Jg-mIq">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Myn-rG-44X"/>
+                                </connections>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="2z1-Jg-mIq" id="eBN-r2-bnZ"/>
                         <outlet property="familyName" destination="VHh-Ef-24h" id="Hc8-Es-uRl"/>
                         <outlet property="firstName" destination="paH-3d-kbU" id="JEI-fv-pcc"/>
                         <outlet property="kanjiName" destination="GYU-Yy-0SG" id="QPg-Ax-ai3"/>

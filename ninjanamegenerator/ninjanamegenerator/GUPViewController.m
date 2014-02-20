@@ -24,6 +24,7 @@ static NSString * DB_EXT         = @"plist";
 @property(strong, nonatomic) NSArray * familyNameDB;
 @property(strong, nonatomic) NSArray * popularNameDB;
 @property(strong, nonatomic) NSArray * firstNameDB;
+@property(nonatomic) BOOL bannerIsVisible;
 
 @end
 
@@ -32,6 +33,12 @@ static NSString * DB_EXT         = @"plist";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if(self.bannerView)
+    {
+        self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, -self.bannerView.frame.size.height);
+    }
+    
 	// Do any additional setup after loading the view, typically from a nib.
     [self initializeDB];
 
@@ -39,6 +46,8 @@ static NSString * DB_EXT         = @"plist";
     {
         [self performSelector:@selector(onGenerateButtonTouchedUp:) withObject:nil];
     }
+    
+    self.bannerIsVisible = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,6 +93,37 @@ static NSString * DB_EXT         = @"plist";
             }
         };
         [self presentViewController:composeController animated:YES completion:nil];
+    }
+}
+
+#pragma mark - iAd
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+{
+    NSLog(@"Banner view is begining an ad action.");
+    return YES;
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    if (!self.bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
+        [UIView commitAnimations];
+        self.bannerIsVisible = YES;
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    if(self.bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
+        [UIView commitAnimations];
+        self.bannerIsVisible = NO;
     }
 }
 
